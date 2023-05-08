@@ -93,5 +93,5 @@ def submitEmail (request):
         email.save()
         return JsonResponse({"message": "Email submitted successfully"})
     except Exception as e:
-        print("btich")
+        print("btic3h")
         return JsonResponse({"message": "Something went wrong 🫠"})
