@@ -17,13 +17,12 @@ import os
 from .cleanData import clean_csv_file
 import random
 from .modelTrainer import getUserInfo
-
+from .models import EmailList
+from django.core.mail import send_mail
 
 #we need to fine tune the model.
-#It is not vey accurate
+#It is not very accurate
 #Maybe adjust the dataset to make it more accurate
-
-
 
 def getdir():
    # "C:\Users\personal\Desktop\programming stuff\Final-Year\a.i"
@@ -85,3 +84,13 @@ def predictor (request):
     
 
     return JsonResponse({"message": probability_of_malaria})
+
+@api_view(["POST"])
+@permission_classes([AllowAny])
+def submitEmail (request):
+    try:
+        email=EmailList.objects.create(email=request.data['email'])
+        email.save()
+        return JsonResponse({"message": "Email submitted successfully"})
+    except Exception as e:
+        return JsonResponse({"message": "Something went wrong 🫠"})

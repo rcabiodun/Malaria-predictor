@@ -112,7 +112,7 @@ if __name__=="__main__":
 
 
     
-    print("DONE CALIBRATING ERI")
+    print("DONE CALIBRATING ")
     # make a prediction
     model.save("saved_model/malaria_model")
     
