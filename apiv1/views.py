@@ -14,7 +14,7 @@ from pandas import read_csv
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 import os
-from .cleanData import clean_csv_file
+#from .cleanData import clean_csv_file
 import random
 from .modelTrainer import getUserInfo
 from .models import EmailList
@@ -44,10 +44,10 @@ def predictor (request):
 
     module_dir=os.path.dirname(__file__)
 
-    file_path=os.path.join(module_dir,"training.csv")
+    file_path=os.path.join(module_dir,"newTraining.csv")
     dftrain = read_csv(file_path)
 
-    clean_csv_file(dftrain)
+#    clean_csv_file(dftrain)
 
     y_train = dftrain.pop("prognosis")
     # load the dataset

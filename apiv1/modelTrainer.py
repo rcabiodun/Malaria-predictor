@@ -14,7 +14,7 @@ from matplotlib import pyplot
 
 module_dir=os.path.dirname(__file__)
 
-file_path=os.path.join(module_dir,"training.csv")
+file_path=os.path.join(module_dir,"newTraining.csv")
 
 dftrain = read_csv(file_path)
 
@@ -47,8 +47,14 @@ def getUserInfo(report):
     print(report)
     headers = []
     userReply = []
+    count=0
     for key in dftrain.keys():
-        headers.append(key)
+        if count == 0:
+            pass
+        
+        else:
+            headers.append(key)
+        count+=1
 
     for header in headers:
         if header.lower() in report.keys():

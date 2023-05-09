@@ -1,8 +1,8 @@
 import random
-
+'''
 
 def clean_csv_file(df):
-    df.pop("Unnamed: 133")
+    #df.pop("Unnamed: 133")
 
     for index in df.loc[df["prognosis"]=="Malaria"].index:
         df["loss_of_appetite"][index]=1
@@ -52,6 +52,8 @@ def clean_csv_file(df):
         df["fatigue"][index]=1
         df["swelled_lymph_nodes"]=random.randint(0,1)
 
+    df.to_csv("newTraining.csv",encoding="UTF-8")
 
     
 
+'''
