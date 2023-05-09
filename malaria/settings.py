@@ -33,6 +33,8 @@ ALLOWED_HOSTS = ["*",
                  "https://malaria-pred-hb2y.onrender",
                  "malaria-pred-hb2y.onrender.com/",
                  "malaria-pred-hb2y.onrender.com",
+                 "http://comforts-malaria-predictor-new.onrender.com",
+                 "http://comforts-malaria-predictor-new.onrender.com/",
                  "https://comforts-malaria-predictor-new.onrender.com",
                  "https://comforts-malaria-predictor-new.onrender.com/"
                  "comforts-malaria-predictor-new.onrender.com",
