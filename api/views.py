@@ -58,7 +58,7 @@ def predictor (request):
     # print(y_train_encoder.inverse_transform([0]))
 
     # determine the number of input features
-    number_of_features = len(list(dftrain.keys()))
+    #number_of_features = len(list(dftrain.keys()))
     print(os.getcwd())
     model = tf.keras.models.load_model(getdir())
 
