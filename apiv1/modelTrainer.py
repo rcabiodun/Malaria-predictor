@@ -19,7 +19,7 @@ file_path=os.path.join(module_dir,"training.csv")
 dftrain = read_csv(file_path)
 
 
-clean_csv_file(dftrain)
+#clean_csv_file(dftrain)
 
 y_train = dftrain.pop("prognosis")
 # load the dataset
