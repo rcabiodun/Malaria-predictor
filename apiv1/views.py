@@ -14,9 +14,9 @@ from pandas import read_csv
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 import os
-#from .cleanData import clean_csv_file
+from .cleanData import clean_csv_file
 import random
-#from .modelTrainer import getUserInfo
+from .modelTrainer import getUserInfo
 from .models import EmailList
 from django.core.mail import send_mail
 
@@ -41,13 +41,13 @@ def getdir():
 @api_view(["POST"])
 @permission_classes([AllowAny])
 def predictor (request):
+
+    module_dir=os.path.dirname(__file__)
+
     file_path=os.path.join(module_dir,"training.csv")
     dftrain = read_csv(file_path)
 
-    return JsonResponse({"message": "probability_of_malaria"})
-
-'''
-    #clean_csv_file(dftrain)
+    clean_csv_file(dftrain)
 
     y_train = dftrain.pop("prognosis")
     # load the dataset
@@ -92,7 +92,8 @@ def predictor (request):
     print(y_train_encoder.classes_[argmax(yhat)])
     print(y_train_encoder.inverse_transform([argmax(yhat)]))
     print(probability_of_malaria)
-    '''
+    return JsonResponse({"message": probability_of_malaria})
+    
 
 
 @api_view(["POST"])
