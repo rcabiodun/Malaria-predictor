@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from tensorflow.keras import Sequential, optimizers, metrics, losses, callbacks,utils
 from tensorflow.keras.layers import Dense, Dropout
-from .cleanData import clean_csv_file
+#from .cleanData import clean_csv_file
 import random
 import os
 import time
