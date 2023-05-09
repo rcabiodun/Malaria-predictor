@@ -26,9 +26,17 @@ SECRET_KEY = 'django-insecure-!u0z#c4s$-&d7zxugsm_x12$g=n1$7co!%yd8_o+t8nd5#4t^*
 DEBUG = True
 
 ALLOWED_HOSTS = ["*",
+                 "malaria-pred-hb2y",
+                 "https://malaria-pred-hb2y.onrender.com",
+                 "https://malaria-pred-hb2y.onrender.com/",
+                 "https://malaria-pred-hb2y.onrender.com",
+                 "https://malaria-pred-hb2y.onrender",
+                 "malaria-pred-hb2y.onrender.com/",
+                 "malaria-pred-hb2y.onrender.com",
                  "https://comforts-malaria-predictor-new.onrender.com",
-                 "https://comforts-malaria-predictor-new.onrender",
-                 "comforts-malaria-predictor-new.onrender.com"]
+                 "https://comforts-malaria-predictor-new.onrender.com/"
+                 "comforts-malaria-predictor-new.onrender.com",
+                 "comforts-malaria-predictor-new.onrender.com/"]
 
 
 # Application definition
